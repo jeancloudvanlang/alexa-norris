@@ -1,0 +1,7 @@
+HelloChuckIntent say hello
+HelloChuckIntent say hello world
+HelloChuckIntent hello
+HelloChuckIntent say hi
+HelloChuckIntent say hi world
+HelloChuckIntent hi
+HelloChuckIntent how are you
