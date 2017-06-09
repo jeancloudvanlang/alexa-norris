@@ -17,8 +17,11 @@ import com.amazon.speech.speechlet.*;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.amazon.speech.ui.Reprompt;
 import com.amazon.speech.ui.SimpleCard;
+import helloChuck.chuckApi.ChuckService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
 
 /**
  * This sample shows how to create a simple speechlet for handling speechlet requests.
@@ -90,7 +93,13 @@ public class HelloChuckSpeechlet implements Speechlet {
      * @return SpeechletResponse spoken and visual response for the given intent
      */
     private SpeechletResponse getHelloResponse() {
-        String speechText = "Hello Chuck";
+        String speechText;
+
+        try {
+            speechText = new ChuckService().getFact();
+        } catch (IOException e) {
+            speechText = "Chuck Norris counted to infinity. Twice!";
+        }
 
         // Create the Simple card content.
         SimpleCard card = new SimpleCard();

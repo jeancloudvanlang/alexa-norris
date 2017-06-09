@@ -39,5 +39,5 @@ To run this example skill you need to do two things. The first is to deploy the 
 
 ## Examples
 ### One-shot model:
-    User: "Alexa, tell Greeter to say hello."
-    Alexa: "Hello World!"
+    User: "Alexa, ask Chuck Factor for a joke"
+    Alexa: "...!"
