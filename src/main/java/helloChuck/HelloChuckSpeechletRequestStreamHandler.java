@@ -10,6 +10,7 @@
 package helloChuck;
 
 import com.amazon.speech.speechlet.lambda.SpeechletRequestStreamHandler;
+import helloChuck.chuckApi.ChuckService;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -32,6 +33,6 @@ public final class HelloChuckSpeechletRequestStreamHandler extends SpeechletRequ
     }
 
     public HelloChuckSpeechletRequestStreamHandler() {
-        super(new HelloChuckSpeechlet(), supportedApplicationIds);
+        super(new HelloChuckSpeechlet(new ChuckService()), supportedApplicationIds);
     }
 }

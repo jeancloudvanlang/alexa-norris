@@ -1,5 +1,3 @@
-package helloChuck;
-
 import helloChuck.chuckApi.ChuckService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,8 +12,8 @@ public class ChuckServiceTest {
 
         String fact = chuckService.getFact();
 
-        System.out.println(fact);
         Assert.assertNotNull(fact);
+        Assert.assertTrue(fact.length() > 0);
     }
 
 }

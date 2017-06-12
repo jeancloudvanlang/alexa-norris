@@ -52,7 +52,6 @@ public class ChuckService {
         return chuckResponse.fact.joke;
     }
 
-    // TODO add firstName lastName feature?
     private static URI getBaseURI() {
         final String baseApiUrl = "http://api.icndb.com/jokes/random";
 

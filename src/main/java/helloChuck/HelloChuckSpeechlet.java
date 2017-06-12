@@ -28,6 +28,11 @@ import java.io.IOException;
  */
 public class HelloChuckSpeechlet implements Speechlet {
     private static final Logger log = LoggerFactory.getLogger(HelloChuckSpeechlet.class);
+    private final ChuckService chuckService;
+
+    public HelloChuckSpeechlet(ChuckService chuckService) {
+        this.chuckService = chuckService;
+    }
 
     @Override
     public void onSessionStarted(final SessionStartedRequest request, final Session session) throws SpeechletException {
@@ -49,7 +54,7 @@ public class HelloChuckSpeechlet implements Speechlet {
         String intentName = (intent != null) ? intent.getName() : null;
 
         if ("HelloChuckIntent".equals(intentName)) {
-            return getHelloResponse();
+            return getChuckFactResponse();
         } else if ("AMAZON.HelpIntent".equals(intentName)) {
             return getHelpResponse();
         } else {
@@ -92,11 +97,11 @@ public class HelloChuckSpeechlet implements Speechlet {
      *
      * @return SpeechletResponse spoken and visual response for the given intent
      */
-    private SpeechletResponse getHelloResponse() {
+    private SpeechletResponse getChuckFactResponse() {
         String speechText;
 
         try {
-            speechText = new ChuckService().getFact();
+            speechText = chuckService.getFact();
         } catch (IOException e) {
             speechText = "Chuck Norris counted to infinity. Twice!";
         }

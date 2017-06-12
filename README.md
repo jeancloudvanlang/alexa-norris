@@ -1,5 +1,14 @@
-#Sample AWS Lambda function for Alexa
+#Sample AWS Lambda function for Alexa with a Chuck Norris skill
 A simple [AWS Lambda](http://aws.amazon.com/lambda) function that demonstrates how to write a skill for the Amazon Echo using the Alexa SDK.
+
+## Dependencies
+* JUnit 4
+* AssertJ 3
+* Mockito 2
+* Jersey Client
+* Amazon Alexa SDK
+* AWS Lambda Core
+
 
 ## Concepts
 This simple sample has no external dependencies or session management, and shows the most basic example of how to create a Lambda function for handling Alexa Skill requests.
