@@ -29,7 +29,7 @@ public final class HelloChuckSpeechletRequestStreamHandler extends SpeechletRequ
          * This Id can be found on https://developer.amazon.com/edw/home.html#/ "Edit" the relevant
          * Alexa Skill and put the relevant Application Ids in this Set.
          */
-        supportedApplicationIds.add("amzn1.ask.skill.1d875e80-6488-4c6f-8d35-658bba45b436");
+        supportedApplicationIds.add("amzn1.ask.skill.85956a47-7092-4e64-aa19-b3cad90620a2");
     }
 
     public HelloChuckSpeechletRequestStreamHandler() {
