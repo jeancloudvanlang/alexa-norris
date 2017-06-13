@@ -31,7 +31,7 @@ dependencies {
     compile 'org.apache.directory.studio:org.apache.commons.io:2.4'
     compile 'org.eclipse.jetty:jetty-server:9.0.6.v20130930'
     compile 'org.eclipse.jetty:jetty-servlet:9.0.6.v20130930'
-    compile 'org.slf4j:slf4j-api:1.7.10'
+    compile 'org.slf4j:slf4j-api:1.7.25'
 
     // REST Client dependencies
     compile group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '2.26-b03'
@@ -45,8 +45,9 @@ dependencies {
 
     // Testing dependencies
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile 'org.assertj:assertj-core:3.8.0'
-    testCompile "org.mockito:mockito-core:2.+"
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.8.0'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.+'
+    testCompile group: 'org.slf4j', name: 'slf4j-nop', version: '1.7.25'
 }
 
 task fatJar(type: Jar) {
