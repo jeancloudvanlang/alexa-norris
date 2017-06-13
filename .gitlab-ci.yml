@@ -4,6 +4,7 @@ stages:
 - deploy
 
 build:
+  image: java:8
   stage: build
   script:
   - ./gradlew clean test
