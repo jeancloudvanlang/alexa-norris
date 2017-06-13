@@ -28,4 +28,4 @@ deploy:
   - cd ./build/libs
   - zip -X -r ../../norris.zip *
   - cd ../..
-  - aws lambda update-function-code --function-name ChuckFactor --zip-file fileb://norris.zip --region eu-central-1
+  - aws lambda update-function-code --function-name ChuckFactor --zip-file fileb://norris.zip --region eu-west-1
