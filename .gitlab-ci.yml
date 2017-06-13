@@ -1,4 +1,4 @@
-image: java:8
+image: rappdw/docker-java-python
 
 
 stages:
