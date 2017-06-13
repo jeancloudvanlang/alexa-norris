@@ -17,6 +17,7 @@ publish:
   - ./gradlew fatJar
 
 deploy:
+  stage: deploy
   script:
   - pip install awscli
   - cd ./build/libs
