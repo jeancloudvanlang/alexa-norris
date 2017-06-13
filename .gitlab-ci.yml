@@ -23,6 +23,7 @@ deploy:
   stage: deploy
   script:
   - pip install awscli
+  - apt install zip
   - cd ./build/libs
   - zip -X -r ../../norris.zip *
   - cd ../..
