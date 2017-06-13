@@ -13,8 +13,8 @@ publish:
   artifacts:
     paths:
     - ./build/libs/*
-    script:
-    - ./gradlew fatJar
+  script:
+  - ./gradlew fatJar
 
 deploy:
   script:
